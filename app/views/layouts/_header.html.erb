@@ -38,10 +38,21 @@
           mb-md-0
         "
       >
-        <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Inventory</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Customers</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
+      <li>
+        <%= link_to t('header.menu.about'), about_path, class: "nav-link px-2 #{current_page?(controller: 'welcome', action: 'about') ? 'link-secondary' : 'link-dark' }" %>
+      </li>
+      <li>
+        <%= link_to t('header.menu.news'), news_path, class: "nav-link px-2 #{current_page?(controller: 'articles', action: 'news') ? 'link-secondary' : 'link-dark' }" %>
+      </li>
+      <li>
+        <%= link_to t('header.menu.cooking'), cooking_path, class:"nav-link px-2 #{current_page?(controller: 'articles', action: 'cooking') ? 'link-secondary' : 'link-dark' }" %>
+      </li>
+      <li>
+        <%= link_to t('header.menu.retail'), retail_path, class:"nav-link px-2 #{current_page?(controller: 'articles', action: 'retail') ? 'link-secondary' : 'link-dark' }" %>
+      </li>
+      <li>
+        <%= link_to t('header.menu.workshop'), workshop_path, class:"nav-link px-2 #{current_page?(controller: 'articles', action: 'workshop') ? 'link-secondary' : 'link-dark' }" %>
+      </li>
       </ul>
 
       <%# <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"> %>
