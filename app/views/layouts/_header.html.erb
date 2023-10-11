@@ -39,19 +39,19 @@
         "
       >
       <li>
-        <%= link_to t('header.menu.about'), about_path, class: "nav-link px-2 #{current_page?(controller: 'welcome', action: 'about') ? 'link-secondary' : 'link-dark' }" %>
+        <%= link_to t('header.menu.about'), about_path, class: current_link_class(about_path) %>
       </li>
       <li>
-        <%= link_to t('header.menu.news'), news_path, class: "nav-link px-2 #{current_page?(controller: 'articles', action: 'news') ? 'link-secondary' : 'link-dark' }" %>
+        <%= link_to t('header.menu.news'), news_path, class: current_link_class(news_path) %>
       </li>
       <li>
-        <%= link_to t('header.menu.cooking'), cooking_path, class:"nav-link px-2 #{current_page?(controller: 'articles', action: 'cooking') ? 'link-secondary' : 'link-dark' }" %>
+        <%= link_to t('header.menu.cooking'), cooking_path, class: current_link_class(cooking_path) %>
       </li>
       <li>
-        <%= link_to t('header.menu.retail'), retail_path, class:"nav-link px-2 #{current_page?(controller: 'articles', action: 'retail') ? 'link-secondary' : 'link-dark' }" %>
+        <%= link_to t('header.menu.retail'), retail_path, class: current_link_class(retail_path) %>
       </li>
       <li>
-        <%= link_to t('header.menu.workshop'), workshop_path, class:"nav-link px-2 #{current_page?(controller: 'articles', action: 'workshop') ? 'link-secondary' : 'link-dark' }" %>
+        <%= link_to t('header.menu.workshop'), workshop_path, class: current_link_class(workshop_path) %>
       </li>
       </ul>
 
