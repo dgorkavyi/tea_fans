@@ -9,23 +9,9 @@
         justify-content-lg-start
       "
     >
-      <a
-        href="/"
-        class="
-          d-flex
-          align-items-center
-          mb-2
-          mb-lg-0
-          text-dark
-          text-decoration-none
-        "
-      >
-        <img
-          class="bi me-2"
-          style="width:80px; height: 80px;"
-          src="https://cdn.worldvectorlogo.com/logos/tea.svg"
-        />
-      </a>
+    <%= link_to root_path do %>
+      <%= image_tag('tea.svg', size: "80") %>
+    <% end %>
 
       <ul
         class="
